@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WebView</string>
+    <string name="text1">Лише один клік і ти у грі</string>
+    <string name="email">Email</string>
+    <string name="phone_hint">+380 (_ _ _) _ _ _ _ _ _ _</string>
+    <string name="order">Замовити</string>
+    <string name="order_game">Замовити гру</string>
+</resources>
