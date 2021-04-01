@@ -32,14 +32,12 @@ class MainActivity : AppCompatActivity() {
             intent = Intent(this, WebView::class.java)
             finish()
             startActivity(intent)
-
             dbManager.writeDB(nameText.text.toString(), phoneText.text.toString(),
                     emailText.text.toString())
-
-            Toast.makeText(this, "$dataList", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(this, "Fill all the lines!", Toast.LENGTH_SHORT).show()
         }
+
     }
 
     override fun onDestroy() {

@@ -29,6 +29,11 @@ class WebView : AppCompatActivity() {
                 return true
             }
         }
+        if (android.os.Build.VERSION.SDK_INT >= 21) {
+            CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true);
+        } else {
+            CookieManager.getInstance().setAcceptCookie(true);
+        }
         webView.loadUrl("https://pin-up.games")
         webView.settings.javaScriptEnabled = true
         webView.settings.allowContentAccess = true
