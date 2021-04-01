@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_background"
+    android:orientation="horizontal"
     tools:context=".MainActivity">
 
+    
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/order"
-        android:textSize="30sp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/order"
         android:textColor="@color/white"
-        />
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/nameText"
@@ -38,37 +37,34 @@
         android:layout_below="@+id/nameText"
         android:layout_marginHorizontal="20dp"
         android:ems="10"
-        android:inputType="textAutoComplete|phone"
         android:hint="@string/phone_hint"
-        android:textColorHint="@color/white"
+        android:inputType="textAutoComplete|phone"
         android:textColor="@color/white"
-        />
+        android:textColorHint="@color/white" />
 
     <EditText
         android:id="@+id/emailText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:hint="@string/email"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
         android:layout_below="@+id/phoneText"
         android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="20dp"
-        />
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/emailText"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
         android:text="@string/text1"
         android:textColor="@color/white"
-        android:textSize="18sp"
-        android:layout_below="@id/emailText"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="20dp"
-        />
+        android:textSize="18sp" />
 
     <androidx.appcompat.widget.AppCompatButton
         style="@style/Widget.AppCompat.Button.Colored"
@@ -76,11 +72,10 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
         android:layout_marginBottom="-10dp"
         android:layout_toEndOf="@id/textView"
-        android:text="@string/order_game"
         android:background="@drawable/my_button_bg"
-        />
+        android:onClick="saveDataOnClick"
+        android:text="@string/order_game" />
 
 </RelativeLayout>
