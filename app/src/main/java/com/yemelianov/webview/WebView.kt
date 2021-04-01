@@ -18,10 +18,10 @@ class WebView : AppCompatActivity() {
         val cookieManager = CookieManager.getInstance()
         cookieManager.setAcceptThirdPartyCookies(webView, true)
 
-        webView.webViewClient = object : WebViewClient(){
+        webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(
-                view: WebView?,
-                url: String?
+                    view: WebView?,
+                    url: String?
             ): Boolean {
                 if (url != null) {
                     view?.loadUrl(url)
@@ -30,10 +30,10 @@ class WebView : AppCompatActivity() {
             }
         }
         webView.loadUrl("https://pin-up.games")
-        webView.settings.javaScriptEnabled=true
-        webView.settings.allowContentAccess=true
-        webView.settings.domStorageEnabled=true
-        webView.settings.useWideViewPort=true
+        webView.settings.javaScriptEnabled = true
+        webView.settings.allowContentAccess = true
+        webView.settings.domStorageEnabled = true
+        webView.settings.useWideViewPort = true
 
     }
 }

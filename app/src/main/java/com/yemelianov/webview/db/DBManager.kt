@@ -22,18 +22,19 @@ class DBManager(context: Context) {
         db?.insert(UsersDataBase.TABLE_NAME, null, values)
     }
 
-    fun readDBData() : ArrayList<String>{
+    fun readDBData(): ArrayList<String> {
         val dbList = ArrayList<String>()
         var cursor = db?.query(UsersDataBase.TABLE_NAME, null, null,
-            null, null, null, null)
-            while (cursor?.moveToNext()!!) {
-                val dbData = cursor.getString(cursor.getColumnIndexOrThrow(UsersDataBase.COLUMN_NAME_USERNAME))
-                dbList.add(dbData.toString())
-            }
+                null, null, null, null)
+        while (cursor?.moveToNext()!!) {
+            val dbData = cursor.getString(cursor.getColumnIndexOrThrow(UsersDataBase.COLUMN_NAME_PHONE))
+            dbList.add(dbData.toString())
+        }
         cursor.close()
         return dbList
     }
-    fun closeDB(){
+
+    fun closeDB() {
         dbHelper.close()
     }
 

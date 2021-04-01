@@ -7,7 +7,7 @@
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
-    
+
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
-    <EditText
+    <AutoCompleteTextView
         android:id="@+id/phoneText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
