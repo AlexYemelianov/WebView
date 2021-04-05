@@ -24,7 +24,7 @@ class DBManager(context: Context) {
 
     fun readDBData(): ArrayList<String> {
         val dbList = ArrayList<String>()
-        var cursor = db?.query(UsersDataBase.TABLE_NAME, null, null,
+        val cursor = db?.query(UsersDataBase.TABLE_NAME, null, null,
                 null, null, null, null)
         while (cursor?.moveToNext()!!) {
             val dbData = cursor.getString(cursor.getColumnIndexOrThrow(UsersDataBase.COLUMN_NAME_PHONE))

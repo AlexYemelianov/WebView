@@ -10,6 +10,7 @@ import android.webkit.WebViewClient
 import kotlinx.android.synthetic.main.activity_web_view.*
 
 class WebView : AppCompatActivity() {
+
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +40,15 @@ class WebView : AppCompatActivity() {
         webView.settings.allowContentAccess = true
         webView.settings.domStorageEnabled = true
         webView.settings.useWideViewPort = true
+
+    }
+
+    override fun onBackPressed(){
+        if(webView!!.canGoBack()) {
+            webView.goBack()
+        } else {
+            super.onBackPressed()
+        }
 
     }
 }
