@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.CookieManager
-import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import kotlinx.android.synthetic.main.activity_web_view.*
@@ -31,9 +30,9 @@ class WebView : AppCompatActivity() {
             }
         }
         if (android.os.Build.VERSION.SDK_INT >= 21) {
-            CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true);
+            CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true)
         } else {
-            CookieManager.getInstance().setAcceptCookie(true);
+            CookieManager.getInstance().setAcceptCookie(true)
         }
         webView.loadUrl("https://pin-up.games")
         webView.settings.javaScriptEnabled = true

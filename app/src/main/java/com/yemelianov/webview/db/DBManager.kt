@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteDatabase
 
 class DBManager(context: Context) {
 
-    val dbHelper = DBHelper(context)
-    var db: SQLiteDatabase? = null
+    private val dbHelper = DBHelper(context)
+    private var db: SQLiteDatabase? = null
 
     fun openDB() {
         db = dbHelper.writableDatabase
